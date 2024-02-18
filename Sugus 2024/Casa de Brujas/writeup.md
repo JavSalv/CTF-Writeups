@@ -6,7 +6,7 @@
 
 ## Archivo
 
-- [CasaBruja.png](../CasaBruja.png)
+- [CasaBruja.png](./CasaBruja.png)
 
 - - - 
 ## Solución
@@ -42,13 +42,13 @@ Ahora lo que debemos hacer es corregir el número para que se corresponda con el
 >00000030: 43bb 7f00 0020 0049 4441 5478 da6c bd69  C.... .IDATx.l.i
 >~~~
 
-![Captura imagen](./CasaBrujaMod.png)
+![Captura imagen](./images/CasaBrujaMod.png)
 
 !Que miedo! A primera vista la imagen no parece tener nada raro. Si nos fijamos bien, a la derecha parece haber un recuadro negro, seguro que debe de haber algo ahí escondido.
 
 Usando la herramienta [stegsolve](https://wiki.bi0s.in/steganography/stegsolve/) podemos analizar los diferentes **canales** de color de la imagen para ver que esconde el recuadro.
 
-![Captura Steghide](./Screenshot%20Steghide.png)
+![Captura Steghide](./images/Screenshot%20Steghide.png)
 
 En el canal azul vemos lo que parece la flag, pero está codificada.
 
