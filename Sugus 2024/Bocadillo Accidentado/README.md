@@ -45,9 +45,65 @@ Si abrimos el PDF en un editor hexadecimal, vemos que efectivamente el número d
 
 Si cambiamos el número de páginas a 2 podremos acceder a la segunda página del documento.
 
+Lo mas importante de la página es el mensaje en texto plano y el mensaje cifrado:
+
+>~~~
+>No sE que voy a hacEr cUanDo dEsCubraS eSto, esPero QUe El BOCaDilLoeSTUviErA RiCO Al meNos. ErA DE bAcon Y quEsO auNQue Te intEresA mAS sabeR que es De bAcon. Lo hIce A la pLanCha Y el qUeso ERa CHedDAr y me qUEdo muy fUnDiDo cuidadO no TE MancHeSSSs.
+>
+>
+> ;Gj6*o7_\Pv8l{UzH+uUZneSW?f&Xk{33&'Dp}5Wyizv
+>~~~
+
+El texto en código plano está cifrado con un **Cifrado Bacon**, el enunciado y el mensaje repiten mucho la palabra _bacon_, y la manera de intercalar mayúsculas y minúsculas lo delata.
+
+Para obtener el mensaje descifrado debemos eliminar los espacios y signos de puntuación del mensaje, después hay que sustituir las letras mayúsculas por 1\`s (o A\`s) y las minúsuclas por 0\`s (o B\`s), para generar un mensaje en alfabeto bacon y poder descifrarlo.
+
+```python
+msg = "No sE que voy a hacEr cUanDo dEsCubraS eSto, esPero QUe El BOCaDilLo eSTUviErA RiCO Al meNos. ErA DE bAcon Y quEsO auNQue Te intEresA mAS sabeR que es De bAcon. Lo hIce A la pLanCha Y el qUeso ERa CHedDAr y me qUEdo muy fUnDiDo cuidadO no TE MancHeSSSs."
+
+msg = msg.replace(",","")
+msg = msg.replace(".","")
+msg = msg.replace(" ","")
+
+salida = ["1" if c.isupper() else "0" for c in msg]
+print(''.join(salida))
+```
+
+>~~~
+>$ python3 script.py
+>10010000000000100100100101000010100001000110101110100100111001011011100010010111010001001010011001000010001011000010000010010001001001000100100100010001101100110000011000000101010000000100111000101110
+>~~~
+
+Usando [cyberchef](https://gchq.github.io/CyberChef/#recipe=Bacon_Cipher_Decode('Complete','0/1',false)&input=MTAwMTAwMDAwMDAwMDAxMDAxMDAxMDAxMDEwMDAwMTAxMDAwMDEwMDAxMTAxMDExMTAxMDAxMDAxMTEwMDEwMTEwMTExMDAwMTAwMTAxMTEwMTAwMDEwMDEwMTAwMTEwMDEwMDAwMTAwMDEwMTEwMDAwMTAwMDAwMTAwMTAwMDEwMDEwMDEwMDAxMDAxMDAxMDAwMTAwMDExMDExMDAxMTAwMDAwMTEwMDAwMDAxMDEwMTAwMDAwMDAxMDAxMTEwMDAxMDExMTA)
+desciframos el Bacon y conseguimos el mensaje: `SABES QUE NO SOLO EXISTE EL BASE SESENTAYCUATRO` lo que nos da a entender que los otros caracteres están cifrados en otro tipo de BaseXX, en este caso Base92.
+
+Si lo decodificamos obtenemos 
+
+>~~~
+> HFTFH{Jfv_Irxl_Vhgzyz_Vo_Y0xzwrool}
+>~~~
+
+Se parece mucho al formato de una flag, pero con algún tipo de cifrado de sustitución.
+
+Usando strings en el fichero descubrimos un mensaje en el comienzo de este:
+
+>~~~
+> $ strings Envoltorio_Bocadillo.pdf | more
+>Ha sido una buena idea usar un cifrado Hebreo >:)
+>%PDF-1.5
+>4 0 obj
+>/Filter /FlateDecode
+>/Length 2229
+>~~~
+
+El cifrado en hebreo al que se refiere es el **Cifrado Atbash** y descifrándolo obtendríamos la flag.
 
 
+## Flag
 
+```
+SUGUS{Que_Rico_Estaba_El_B0cadillo}
+```
 
 
 
