@@ -9,6 +9,12 @@
 - [caja_fuerte.zip](./caja_fuerte.zip)
 - [gatito.jpg](./gatito.jpg)
 
+## Hints
+
+- PNG es uno de los formatos soportados por _steghide_, a la hora de usarlo sobre una imagen se suele necesitar una contraseña, fíjate bien en el enunciado.
+- Vignère, además de ser un muy buen amigo mío, es un criptógrafo del siglo XVI que dió nombre a un cifrado polialfabético que emplea una clave para cifrar un mensaje. La clave y el mensaje se encuentran en la _caja\_fuerte_, aunque uno de los dos no se encuentra a simple vista (u oído).
+
+
 - - - 
 ## Solución
 
