@@ -10,8 +10,8 @@
 
 ## Hints
 
-- En la cabecera de los archivos suele existir un llamado **"Número mágico"** que nos indica el tipo de archivo con el que estamos trabajando. ¿Qué le pasa al de esta imagen?
-- El canal que se menciona en el reto se puede referir a los distintos canales de color que existen en una imagen. Programas como _GIMP_ o algunos más especializados como _steghide_ pueden ayudar a aislar dichos canales.
+- En la cabecera de los archivos suele existir un llamado **"Número mágico"** que nos indica el tipo de archivo con el que estamos trabajando.
+- El canal que se menciona en el reto se puede referir a los distintos canales de color que existen en una imagen. Programas como _GIMP_ o algunos más especializados como _stegh..._ pueden ayudar a aislar dichos canales.
 
 - - - 
 ## Solución
