@@ -8,13 +8,22 @@
 
 - [CasaBruja.png](./CasaBruja.png)
 
-## Hints
+<details> 
+  <summary><h2>Hints</h2></summary> 
+
+<br>
 
 - En la cabecera de los archivos suele existir un llamado **"Número mágico"** que nos indica el tipo de archivo con el que estamos trabajando.
 - El canal que se menciona en el reto se puede referir a los distintos canales de color que existen en una imagen. Programas como _GIMP_ o algunos más especializados como _stegh..._ pueden ayudar a aislar dichos canales.
 
+</details> 
+
 - - - 
-## Solución
+
+<details> 
+  <summary><h2>Solución</h2></summary> 
+
+<br>
 
 Al intentar abrir la imagen con cualquier visualizador vemos que nos da un error, al parecer el archivo está corrupto. El comando display nos puede dar alguna pista más de lo que ocurre.
 
@@ -73,3 +82,4 @@ El `==` al final de la flag nos da una idea de que puede estar codificada en Bas
 ```
 SUGUS{TeHe4sustad0?}
 ```
+</details> 

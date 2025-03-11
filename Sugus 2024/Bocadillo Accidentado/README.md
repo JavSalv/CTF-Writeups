@@ -12,7 +12,10 @@
 
 _ _ _
 
-## Solución
+<details> 
+  <summary><h2>Solución</h2></summary> 
+
+<br>
 
 Al abrir el PDF nos damos cuenta de que tiene solo una página, y el enunciado menciona que debería de tener dos páginas.
 Hay que conseguir acceder a la segunda página.
@@ -105,9 +108,4 @@ El cifrado en hebreo al que se refiere es el **Cifrado Atbash** y descifrándolo
 SUGUS{Que_Rico_Estaba_El_B0cadillo}
 ```
 
-
-
-
-
-
-
+</details>

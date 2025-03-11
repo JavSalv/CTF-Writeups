@@ -9,14 +9,22 @@
 - [caja_fuerte.zip](./caja_fuerte.zip)
 - [gatito.jpg](./gatito.jpg)
 
-## Hints
+<details> 
+  <summary><h2>Hints</h2></summary> 
+
+<br>
 
 - JPEG es uno de los formatos soportados por _steghide_, a la hora de usarlo sobre una imagen se suele necesitar una contraseña, fíjate bien en el enunciado.
 - Vignère, además de ser un muy buen amigo mío, es un criptógrafo del siglo XVI que dió nombre a un cifrado polialfabético que emplea una clave para cifrar un mensaje. La clave y el mensaje se encuentran en la _caja\_fuerte_, aunque uno de los dos no se encuentra a simple vista (u oído).
 
+</details> 
 
 - - - 
-## Solución
+
+<details> 
+  <summary><h2>Solución</h2></summary> 
+
+<br>
 
 La imagen que nos dan está en formato jpg, uno de los soportados por la herramienta [steghide](https://steghide.sourceforge.net/). Por lo que podemos sospechar que se ha usado para incrustar algún tipo de archivo en la imagen.
 
@@ -80,3 +88,5 @@ Usando [Cyberchef](https://gchq.github.io/CyberChef/#recipe=Vigen%C3%A8re_Decode
 ```
 SUGUS{LosGatosOdianElAgua}
 ```
+
+</details> 
